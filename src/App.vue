@@ -1,27 +1,28 @@
 <template>
   <div id="app">
-    <Header/>
-    <router-view/>
-    <Footer/>
+    <Navbar/>
+    <!-- Other components and content go here -->
+<!--    <Home/>-->
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue';
-import Footer from './components/Footer.vue';
+import Navbar from './components/Navbar.vue';
 
 export default {
+  name: 'App',
   components: {
-    Header,
-    Footer,
+    Navbar,
+
   },
 };
 </script>
 
 <style>
-/* Global styles can go here */
+/* Global styles */
 body {
-  background-color: #f0f0f0; /* Light gray background */
-  color: #333; /* Dark gray text */
+  margin: 0;
+  direction: rtl; /* Set global RTL direction */
+  background-color: #fff;
 }
 </style>
