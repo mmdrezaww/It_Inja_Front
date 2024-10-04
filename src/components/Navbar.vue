@@ -1,103 +1,154 @@
 <template>
-  <nav class="navbar">
-    <div class="container">
-      <!-- Logo -->
-      <div class="logo">
-        <img src="@/assets/logo.png" alt="It Inja Logo"/>
-      </div>
+  <div>
+    <nav class="navbar">
 
-      <!-- Links -->
-      <ul class="nav-links">
-        <li><a href="#">خانه</a></li>
-        <li><a href="#">فروشگاه</a></li>
-        <li><a href="#">تماس با ما</a></li>
-        <li><a href="#">درباره ما</a></li>
-        <li><a href="#">وبلاگ</a></li>
+      <!-- Navigation Links -->
+      <ul class="navbar-links">
+        <li>
+          <a href="#" class="nav-link"><i class="fa fa-home"></i> خانه</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link"><i class="fa fa-store"></i> فروشگاه</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link"><i class="fa fa-info-circle"></i> درباره ما</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link"><i class="fa fa-phone"></i> تماس با ما</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link"><i class="fa fa-blog"></i> بلاگ</a>
+        </li>
       </ul>
 
-      <!-- Search and Actions -->
-      <div class="actions">
-        <input type="text" class="search-bar" placeholder="جستجو کنید..."/>
-        <button class="btn-login">ورود</button>
-        <button class="btn-cart">سبد خرید</button>
+      <!-- Logo Section -->
+      <div class="navbar-logo">
+        <img src="@/assets/logo.png" alt="Logo"/>
+        <!--        <span class="logo-text">ITinja</span>-->
       </div>
-    </div>
-  </nav>
+
+      <!-- Search Bar and User Options -->
+      <div class="navbar-actions">
+        <input type="text" placeholder="جستجو..." class="search-bar"/>
+        <button class="search-button">Search</button>
+        <div class="user-options">
+          <a href="#" class="nav-link"><i class="fa fa-user"></i> Login</a>
+          <a href="#" class="nav-link"><i class="fa fa-shopping-cart"></i> Cart</a>
+        </div>
+      </div>
+    </nav>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "Navbar",
-};
+  name: 'Navbar',
+}
 </script>
 
 <style scoped>
-/* Global Navbar Container */
+/* Navbar Container */
 .navbar {
-  background-color: #f0f0f0; /* Light gray for background */
-  padding: 15px;
-}
-
-.container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 100%;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #333;
+  color: #fff;
 }
 
-/* Logo Styles */
-.logo img {
-  height: 50px;
+/* Logo Section */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  width: 100px; /* Adjusted size for the logo */
+  height: 55px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  /*font-size: 1.5rem;*/
+  /*font-weight: bold;*/
 }
 
 /* Navigation Links */
-.nav-links {
-  display: flex;
+.navbar-links {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  display: flex;
+  gap: 1.5rem;
 }
 
-.nav-links li {
-  margin: 0 20px;
+.navbar-links li {
+  display: inline-block;
 }
 
-.nav-links a {
+.nav-link {
+  color: #bbb;
   text-decoration: none;
-  color: #333; /* Dark gray for links */
-  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s;
 }
 
-/* Search Bar and Buttons */
-.actions {
+.nav-link:hover {
+  color: #ffcc00; /* Yellow color on hover */
+}
+
+/* Search Bar */
+.navbar-actions {
   display: flex;
   align-items: center;
 }
 
 .search-bar {
-  border: 1px solid #ccc;
-  padding: 5px 10px;
-  margin-right: 10px;
-  border-radius: 5px;
+  padding: 0.5rem;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #555;
+  color: #fff;
+  margin-right: 1rem;
 }
 
-.btn-login,
-.btn-cart {
-  background-color: #ffcc00; /* Bright yellow for buttons */
-  color: #333; /* Dark gray text */
+.search-button {
+  background-color: #ffcc00;
+  color: #333;
   border: none;
-  padding: 7px 15px;
-  margin: 0 5px;
-  border-radius: 5px;
+  padding: 0.5rem 1rem;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-/* Add Hover Effects */
-.btn-login:hover,
-.btn-cart:hover,
-.nav-links a:hover {
-  background-color: #333;
-  color: #ffcc00;
-  transition: 0.3s ease-in-out;
+.search-button:hover {
+  background-color: #e6b800; /* Darker yellow */
+}
+
+/* User Options (Login & Cart) */
+.user-options {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-options .nav-link {
+  display: flex;
+  align-items: center;
+}
+
+.user-options .nav-link i {
+  margin-right: 5px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar-links,
+  .navbar-actions {
+    margin-top: 1rem;
+  }
 }
 </style>
