@@ -1,7 +1,6 @@
 <template>
   <div>
     <nav class="bg-gray-800 text-white px-8 py-4 flex items-center justify-between">
-
       <!-- Navigation Links -->
       <ul class="flex space-x-6">
         <li>
@@ -9,22 +8,27 @@
             خانه <i class="fa fa-home mr-2"></i>
           </a>
         </li>
+
         <hr>
+
         <li>
           <a href="#" class="text-gray-300 hover:text-yellow-400 flex items-center">
             فروشگاه <i class="fa fa-store mr-2"></i>
           </a>
         </li>
+
         <li>
           <a href="#" class="text-gray-300 hover:text-yellow-400 flex items-center">
             درباره ما <i class="fa fa-info-circle mr-2"></i>
           </a>
         </li>
+
         <li>
           <a href="#" class="text-gray-300 hover:text-yellow-400 flex items-center">
             تماس با ما <i class="fa fa-phone mr-2"></i>
           </a>
         </li>
+
         <li>
           <a href="#" class="text-gray-300 hover:text-yellow-400 flex items-center">
             بلاگ <i class="fa fa-blog mr-2">
@@ -32,6 +36,7 @@
           </i>
           </a>
         </li>
+
       </ul>
 
       <!-- Logo Section -->
