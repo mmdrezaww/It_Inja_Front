@@ -1,6 +1,7 @@
 # It_Inja
 
 This template should help get you started developing with Vue 3 in Vite.
+And have A ready Front for your Shop With (Vue)->Spa
 
 ## Recommended IDE Setup
 
